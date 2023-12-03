@@ -31,4 +31,13 @@ const initSlider = () => {
   });
 }
 
+var gifImages = document.querySelectorAll('.gif_image');
+var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+if (windowWidth <= 1300) {
+  for (var i = 0; i < gifImages.length; i++) {
+    gifImages[i].src = '';
+  }
+}
+
 window.addEventListener("load", initSlider);
